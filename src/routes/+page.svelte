@@ -1,4 +1,15 @@
 <script lang="ts">
+    import { onMount } from 'svelte';
+
+    // <!-- 3. 실행 스크립트 -->
+
+    onMount(async () => {
+        new daum.roughmap.Lander({
+            "timestamp": "1753794344506",
+            "key": "6gsy8ybn395"
+        }).render();
+    });
+
     // navbar
     import IntersectionObserver from "svelte-intersection-observer";
     import navbarLogo from "$lib/assets/images/uport_logo.png";
@@ -748,13 +759,12 @@
                 </p>
                 <!-- * 카카오맵 - 지도퍼가기 -->
                 <!-- 1. 지도 노드 -->
-                <div
-                    id="daumRoughmapContainer1698043266627"
+                <div 
+                    id="daumRoughmapContainer1753794344506" 
                     class="root_daum_roughmap root_daum_roughmap_landing"
-                    style="width:100%"
-                >
-                    
+                    style="width:100%">
                 </div>
+                
             </div>
         </section>
     </IntersectionObserver>
