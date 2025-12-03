@@ -1,0 +1,8 @@
+[
+    {
+        "origin": ["https://uport-homepage-543733799390.asia-northeast3.run.app"],
+        "method": ["GET"],
+        "responseHeader": ["Content-Type"],
+        "maxAgeSeconds": 3600
+    }
+]

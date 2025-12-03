@@ -1,0 +1,74 @@
+name: production CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  PROJECT_ID: ${{ vars.GCP_PROJECT_ID }}
+  REGION: ${{ vars.GCP_REGION }}
+  SERVICE_ACCOUNT_EMAIL: ${{ secrets.GCP_SERVICE_ACCOUNT_EMAIL }}
+  ARTIFACT_REGISTRY_NAME: ${{ vars.GCP_ARTIFACT_REGISTRY_NAME }}
+  CONTAINER_NAME: ${{ vars.CONTAINER_NAME }}
+  VERSION: ${{ github.sha }}
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Authenticate with Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
+
+      - name: Set up gcloud CLI
+        uses: google-github-actions/setup-gcloud@v2
+        with:
+          project_id: ${{ env.PROJECT_ID }}
+
+      - name: Authenticate Docker with Artifact Registry
+        run: |
+          gcloud auth configure-docker ${{ env.REGION }}-docker.pkg.dev
+
+      - name: Build Docker image
+        run: |
+          docker build --no-cache . --tag ${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.ARTIFACT_REGISTRY_NAME }}/${{ env.CONTAINER_NAME }}:${{ env.VERSION }}
+
+      - name: Push Docker image to Artifact Registry
+        run: |
+          docker push ${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.ARTIFACT_REGISTRY_NAME }}/${{ env.CONTAINER_NAME }}:${{ env.VERSION }}
+
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Authenticate with Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
+
+      - name: Set up gcloud CLI
+        uses: google-github-actions/setup-gcloud@v2
+        with:
+          project_id: ${{ env.PROJECT_ID }}
+
+      - name: Deploy to Google Cloud Run
+        run: |
+          gcloud run deploy ${{ env.CONTAINER_NAME }} \
+            --image=${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.ARTIFACT_REGISTRY_NAME }}/${{ env.CONTAINER_NAME }}:${{ env.VERSION }} \
+            --allow-unauthenticated \
+            --port=8080 \
+            --service-account=${{ env.SERVICE_ACCOUNT_EMAIL }} \
+            --max-instances=2 \
+            --cpu-throttling \
+            --execution-environment=gen2 \
+            --region=${{ env.REGION }} \
+            --project=${{ env.PROJECT_ID }}
