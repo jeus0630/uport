@@ -1,3 +1,7 @@
+<svelte:head>
+    <meta name="description" content="유포트는 기업의 핵심 자산인 데이터를 안전하고 효율적으로 관리하기 위한 스토리지 솔루션을 제공합니다. 풍부한 경험과 전문성을 바탕으로 고객 맞춤형 스토리지 구축, 운영, 유지보수 서비스를 제공하여 비즈니스 연속성을 보장합니다. 데이터의 저장부터 운영, 보호까지, 유포트가 신뢰할 수 있는 파트너가 되어드립니다." />
+</svelte:head>
+
 <script lang="ts">
     import { onMount } from 'svelte';
 
@@ -259,6 +263,7 @@
 </script>
 
 <svelte:window bind:scrollY />
+
 <main>
     <nav
         id="mainNav"
