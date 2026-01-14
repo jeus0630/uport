@@ -22,11 +22,6 @@
     import headerBgVideo from "$lib/assets/videos/header-bg.mp4";
     import scrollButitonIcon from "$lib/assets/images/scroll-btn-icon.png";
 
-    // expertise section
-    import expertiseItemStorageImg from "$lib/assets/images/expertise/item-storage.svg";
-    import expertiseItemAiImg from "$lib/assets/images/expertise/item-ai.svg";
-    import expertiseItemSiImg from "$lib/assets/images/expertise/item-si.svg";
-
     // barea section
     import bareaItemIconStorage from "$lib/assets/images/barea/item-icon-storage.svg";
     import bareaItemIconStorageActive from "$lib/assets/images/barea/item-icon-storage-active.svg";
@@ -81,12 +76,11 @@
     let isCollapse = true;
 
     const MASTHEAD = -1;1
-    const EXPERTISE = 0;
-    const BAREA = 1;
-    const CLIENTS = 2;
-    const PARTNERS = 3;
-    const LOCATION = 4;
-    const CONTACT = 5;
+    const BAREA = 0;
+    const CLIENTS = 1;
+    const PARTNERS = 2;
+    const LOCATION = 3;
+    const CONTACT = 4;
 
     let masthead: HTMLElement;
     let intersectingMasthead: boolean;
@@ -97,7 +91,6 @@
     let y_slide_container_height: number;
 
     const sectionInfos = [
-        { id: "expertise", href: "#expertise", title: "전문성" },
         { id: "barea", href: "#barea", title: "사업영역" },
         { id: "clients", href: "#clients", title: "고객사" },
         { id: "partners", href: "#partners", title: "파트너십" },
@@ -242,7 +235,7 @@
     }
 
     function scrollDown() {
-        const el = document.querySelector("#expertise");
+        const el = document.querySelector("#barea");
         if (!el) return;
         el.scrollIntoView({
             behavior: "smooth",
@@ -354,7 +347,7 @@
             </div>
             <a
                 class="down-scroll-container"
-                href="#expertise"
+                href="#barea"
                 on:click|preventDefault={scrollDown}
             >
                 <div class="down-scroll">
@@ -364,73 +357,6 @@
                 </div>
             </a>
         </header>
-    </IntersectionObserver>
-    <!-- Services-->
-    <IntersectionObserver
-        element={elementList[EXPERTISE]}
-        bind:intersecting={intersectingList[EXPERTISE]}
-    >
-        <section
-            class="page-section"
-            id="expertise"
-            bind:this={elementList[EXPERTISE]}
-        >
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading">
-                        NetApp 공식 파트너
-                        <br />
-                        <span class="point-word">유포트</span>의 차별화된 전문성
-                    </h2>
-                </div>
-                <div class="row text-center">
-                    <div class="col-md-4">
-                        <span class="w-100">
-                            <img
-                                src={expertiseItemStorageImg}
-                                alt="storage image"
-                            />
-                        </span>
-                        <h4>스토리지</h4>
-                        <p class="text-muted">
-                            유포트는 세계적인 스토리지 기업 NetApp의 공식
-                            파트너로서, 다년간 축적된 경험과 전문성을 바탕으로 <span
-                                class="font-bold"
-                                >스토리지 공급, 컨설팅, 기술 지원 등 종합적인
-                                서비스</span
-                            >를 제공합니다.
-                        </p>
-                    </div>
-                    <div class="col-md-4">
-                        <span class="w-100">
-                            <img src={expertiseItemAiImg} alt="ai image" />
-                        </span>
-                        <h4>AI / 데이터</h4>
-                        <p class="text-muted">
-                            유포트는 AI 전문 기업 엡실론델타와의 파트너십을 통해 <span
-                                class="font-bold"
-                                >쳇봇, AI 플랫폼, MLOps시스템 등의 최첨단 AI 및
-                                데이터 솔루션</span
-                            >을 제공하여 고객 비즈니스의 혁신과 성장을
-                            지원합니다.
-                        </p>
-                    </div>
-                    <div class="col-md-4">
-                        <span class="w-100">
-                            <img src={expertiseItemSiImg} alt="si image" />
-                        </span>
-                        <h4>시스템 통합</h4>
-                        <p class="text-muted">
-                            유포트는 SI 분야에서 종합적인 서비스를 제공합니다. <span
-                                class="font-bold"
-                                >컨설팅, 공급부터 구축 및 기술 지원까지 전
-                                과정에서</span
-                            > 고객의 비즈니스 프로세스를 최적화하고 효율성을 극대화합니다.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
     </IntersectionObserver>
     <!-- Business Area -->
     <IntersectionObserver
