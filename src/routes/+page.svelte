@@ -329,7 +329,10 @@
                 </video>
             </div>
             <div class="container">
-                <h1 class="masthead-heading uppercase">Uport</h1>
+                <h1 class="masthead-heading uppercase text-transparent flex justify-center h-28">
+                    <span class="sr-only">Uport</span>
+                    <img src={navbarLogo} alt="..." class="h-full w-auto"/>
+                </h1>
                 <h2 class="masthead-subheading">
                     Support for you & your comfort
                 </h2>

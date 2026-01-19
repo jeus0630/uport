@@ -922,26 +922,6 @@ p {
         color: #ffc800;
     }
 
-    #expertise {
-        height: fit-content;
-    }
-
-    #expertise .container {
-        margin-top: 60px;
-        margin-bottom: 60px;
-    }
-    
-    #expertise h2.section-heading,
-    #expertise .section-heading.h2 {
-        @apply mt-0 mb-4;
-        font-family: "Oxanium", sans-serif;
-        font-weight: 700;
-        font-size: 26px;
-        line-height: 32.5px;
-        letter-spacing: -2%;
-        text-align: center;
-    }
-
     #barea .background-image-container{
         margin-top: -75px;
         filter: opacity(10%);
@@ -1426,28 +1406,6 @@ p {
                 "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif,
                 "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
                 "Noto Color Emoji";
-        }
-
-
-
-        #expertise {
-            height: 100vh;
-        }
-
-        #expertise .container {
-            margin-top: auto;
-            margin-bottom: auto;
-        }
-
-        #expertise h2.section-heading,
-        #expertise .section-heading.h2 {
-            @apply mt-0 mb-4;
-            font-family: "Oxanium", sans-serif;
-            font-weight: 700;
-            font-size: 55px;
-            line-height: 68.75px;
-            letter-spacing: -2%;
-            text-align: center;
         }
 
         .row {
