@@ -195,7 +195,7 @@ p {
     .masthead {
         @apply flex text-center text-white bg-no-repeat bg-scroll bg-center bg-cover;
         height: 100vh;
-        width: 100vw;
+        width: 100%;
         margin-bottom: 1px;
     }
 
@@ -215,7 +215,7 @@ p {
         filter: brightness(50%);
         object-fit: cover;
         height: 100vh;
-        width: 100vw;
+        width: 100%;
     }
 
     .masthead .container {
@@ -429,7 +429,8 @@ p {
 
     .page-section {
         @apply flex;
-        width: 100vw;
+        position: relative;
+        width: 100%;
         height: 100vh;
         padding-top: 75px;
         margin-bottom: 1px;
@@ -446,6 +447,8 @@ p {
         background-position: center center;
 
         position: absolute;
+        top: 0;
+        left: 0;
         overflow: hidden;
         z-index: -99;
         width: 100%;
@@ -534,7 +537,7 @@ p {
 
     .portfolio-modal .modal-dialog {
         margin: 1rem;
-        max-width: 100vw;
+        max-width: 100%;
     }
     .portfolio-modal .modal-content {
         padding-top: 6rem;
@@ -742,7 +745,6 @@ p {
         line-height: 20px;
         letter-spacing: -2%;
         text-align: center;
-        height: 108px;
     }
 
     .barea-items-container {
@@ -760,7 +762,7 @@ p {
     }
 
     .barea-item-container {
-        --tw-barea-icon-container-size: calc(100vw * 0.078125);
+        --tw-barea-icon-container-size: calc(100% * 0.078125);
         @apply flex flex-col-reverse items-center pt-3 px-3;
         width: var(--tw-barea-icon-container-size);
         height: var(--tw-barea-icon-container-size);
@@ -923,7 +925,6 @@ p {
     }
 
     #barea .background-image-container{
-        margin-top: -75px;
         filter: opacity(10%);
     }
 
@@ -934,14 +935,6 @@ p {
 
     #barea .section-heading {
         @apply text-center w-full;
-    }
-
-    #barea .content-container {
-        @apply flex flex-col items-center;
-    }
-
-    #barea .content-container .section-description {
-        display: none;
     }
 
     #barea .description-container {
@@ -997,7 +990,7 @@ p {
         @apply flex flex-col;
         padding-top: 0 !important;
         position: relative;
-        width: 100vw;
+        width: 100%;
         height: max-content;
         margin-bottom: 53px;
     }
@@ -1365,7 +1358,7 @@ p {
     @media (min-width: 768px) {
         section {
             @apply flex;
-            width: 100vw;
+            width: 100%;
             height: 100vh;
             padding-top: 75px;
         }
@@ -1544,4 +1537,147 @@ p {
             align-items: center;
         }
     }
+}
+
+/* Business Area Grid Design */
+
+#barea {
+    height: auto !important; /* 고정 높이 해제 */
+    padding-bottom: 100px;
+}
+
+#barea .container {
+    display: block;
+}
+
+#barea .container .section-heading {
+    text-align: center;
+}
+
+/* 그리드 레이아웃 설정 */
+.barea-grid-container {
+    display: grid;
+    grid-template-columns: 1fr; /* 모바일: 1열 */
+    gap: 30px; /* 카드 사이 간격 */
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .barea-grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 태블릿: 2열 */
+    }
+}
+
+@media (min-width: 1200px) {
+    .barea-grid-container {
+        grid-template-columns: repeat(3, 1fr); /* PC: 3열 */
+    }
+}
+
+/* 개별 카드 디자인 */
+.barea-card {
+    position: relative; /* 가상 요소 배치를 위해 필수 */
+    background: transparent; /* 배경색은 가상 요소가 담당함 */
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    
+    /* 카드 전체의 입체감 그림자 (테두리와는 별개) */
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.03));
+}
+
+/* 1. [테두리 역할] 회색 배경층 (제일 뒤) */
+.barea-card::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* 꽉 채우기 */
+    background: #E5E7EB;
+    z-index: -2; /* 맨 뒤로 */
+    
+    /* 모양 자르기 */
+    clip-path: polygon(
+        0 0, 
+        100% 0, 
+        100% calc(100% - 40px), 
+        calc(100% - 40px) 100%, 
+        0 100%
+    );
+    
+    transition: background-color 0.3s ease; /* 호버 시 색상 변경 애니메이션 */
+}
+
+/* 2. [카드 본체] 흰색 배경층 (테두리 바로 앞) */
+.barea-card::after {
+    content: "";
+    position: absolute;
+    inset: 1px; /* 1px만큼 안으로 들어감 -> 이 틈으로 회색이 보여서 테두리가 됨 */
+    background-color: #fff; /* 카드 내부 색상 */
+    z-index: -1; /* 글자보다 뒤, 테두리보다 앞 */
+    
+    /* 똑같이 잘라주기 */
+    clip-path: polygon(
+        0 0, 
+        100% 0, 
+        100% calc(100% - 40px), 
+        calc(100% - 40px) 100%, 
+        0 100%
+    );
+
+    transition: inset 0.3s ease;
+}
+
+/* === 호버 효과 === */
+.barea-card:hover {
+    transform: translateY(-7px);
+    /* 호버 시 그림자 진하게 */
+    filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.1));
+}
+
+/* 호버 시 테두리 색상(::before의 배경색) 변경 */
+.barea-card:hover::before {
+    background: linear-gradient(to bottom, #0067C5 6px, #E5E7EB 6px);
+}
+
+/* 호버 시 ::after (흰색 카드) 변경 */
+.barea-card:hover::after {
+    inset: 6px 1px 1px 1px; 
+}
+
+.barea-card .icon-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.barea-card .card-title {
+    font-family: 'NanumSquare', sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    color: #111827;
+    margin-bottom: 16px;
+
+    transition: color 0.3s ease;
+}
+
+/* 마우스 올리면 제목 색상 변경 */
+.barea-card:hover .card-title {
+    color: #000;
+}
+
+.barea-card .card-desc {
+    font-family: 'NanumSquare', sans-serif;
+    font-size: 15px;
+    color: #4B5563;
+    line-height: 1.65;
+    word-break: keep-all; /* 단어 단위 줄바꿈 */
+    margin: 0;
+}
+
+/* 카드 내부 강조 단어 스타일 */
+.barea-card .card-desc .point-word {
+    color: #0067C5;
+    font-weight: 800;
 }

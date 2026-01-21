@@ -106,7 +106,7 @@
             src: bareaItemIconStorage,
             srcActive: bareaItemIconStorageActive,
             heading: `데이터의 가치를 높이는<br/><span class="point-word">스토리지 전문가</span>`,
-            description: `유포트는 기업의 핵심 자산인 데이터를 안전하고 효율적으로 관리하기 위한 스토리지 솔루션을<br/>제공합니다. 풍부한 경험과 전문성을 바탕으로 고객 맞춤형<br/><span class="point-word">스토리지 구축, 운영, 유지보수 서비스</span>를 제공하여 비즈니스 연속성을 보장합니다.<br/><span class="point-word">데이터의 저장부터 운영, 보호까지</span>, 유포트가 신뢰할 수 있는 파트너가 되어드립니다.`,
+            description: `유포트는 기업의 핵심 자산인 데이터를 안전하고 효율적으로 관리하기 위한 스토리지 솔루션을 제공합니다. 풍부한 경험과 전문성을 바탕으로 고객 맞춤형 <span class="point-word">스토리지 구축, 운영, 유지보수 서비스</span>를 제공하여 비즈니스 연속성을 보장합니다. <span class="point-word">데이터의 저장부터 운영, 보호까지</span>, 유포트가 신뢰할 수 있는 파트너가 되어드립니다.`,
         },
         {
             id: "cloud",
@@ -115,7 +115,7 @@
             src: bareaItemIconCloud,
             srcActive: bareaItemIconCloudActive,
             heading: `클라우드로 비즈니스의 <br/><span class="point-word">한계를 넘어서</span>십시오`,
-            description: `유포트는 NetApp Cloud SaaS를 중심으로 <span class="point-word">AWS, Azure, Google Cloud, NCP 등</span><br/>다양한 클라우드 플랫폼에서의 맞춤형 클라우드 서비스를 제공합니다.<br/>NetApp의 선도적인 기술과 유포트의 전문성이 결합하여<br/><span class="point-word">멀티 클라우드 환경 구축, 데이터 관리 및 최적화</span>를 지원합니다.`,
+            description: `유포트는 NetApp Cloud SaaS를 중심으로 <span class="point-word">AWS, Azure, Google Cloud, NCP 등</span> 다양한 클라우드 플랫폼에서의 맞춤형 클라우드 서비스를 제공합니다. NetApp의 선도적인 기술과 유포트의 전문성이 결합하여 <span class="point-word">멀티 클라우드 환경 구축, 데이터 관리 및 최적화</span>를 지원합니다.`,
         },
         {
             id: "ai",
@@ -124,7 +124,7 @@
             src: bareaItemIconAi,
             srcActive: bareaItemIconAiActive,
             heading: `AI와 데이터로 <span class="point-word">비즈니스<br/>혁신을</span> 함께하는 유포트`,
-            description: `유포트는 인공지능 전문 기업 엡실론델타와의 파트너십을 통해 AI와 데이터 분야에서<br/>최상의 솔루션을 제공합니다. <span class="point-word">AI 서비스 개발, 챗봇(생성형 AI) 개발, AI 플랫폼 구축, MLOps 구축/운영 등</span><br/>전방위적인 서비스를 통해 비즈니스의 새로운 가능성을 열어드립니다.<br/>데이터 인사이트 도출부터 AI 기술 도입까지, 유포트가 엡실론델타와 함께<br/>귀사의 비즈니스 혁신을 도와드리겠습니다.`,
+            description: `유포트는 인공지능 전문 기업 엡실론델타와의 파트너십을 통해 AI와 데이터 분야에서 최상의 솔루션을 제공합니다. <span class="point-word">AI 서비스 개발, 챗봇(생성형 AI) 개발, AI 플랫폼 구축, MLOps 구축/운영 등</span> 전방위적인 서비스를 통해 비즈니스의 새로운 가능성을 열어드립니다. 데이터 인사이트 도출부터 AI 기술 도입까지, 유포트가 엡실론델타와 함께 귀사의 비즈니스 혁신을 도와드리겠습니다.`,
         },
         {
             id: "software",
@@ -133,7 +133,7 @@
             src: bareaItemIconSoftware,
             srcActive: bareaItemIconSoftwareActive,
             heading: `맞춤형 소프트웨어로 <span class="point-word">비즈니스 <br/>가치를 높이는</span> 유포트`,
-            description: `유포트는 <span class="point-word">웹, 모바일 앱, 플랫폼, SaaS 등</span> 다양한 분야에서 <span class="point-word">맞춤형 소프트웨어 개발</span> 서비스를 제공합니다.<br/>고객의 비즈니스 요구 사항에 최적화된 솔루션을 제공하여 효율성과 생산성을 향상시킵니다.<br/>혁신적인 기술과 풍부한 경험을 바탕으로 디지털 전환을 선도하는 유포트와 함께<br/>비즈니스 경쟁력을 강화하세요.`,
+            description: `유포트는 <span class="point-word">웹, 모바일 앱, 플랫폼, SaaS 등</span> 다양한 분야에서 <span class="point-word">맞춤형 소프트웨어 개발</span> 서비스를 제공합니다. 고객의 비즈니스 요구 사항에 최적화된 솔루션을 제공하여 효율성과 생산성을 향상시킵니다. 혁신적인 기술과 풍부한 경험을 바탕으로 디지털 전환을 선도하는 유포트와 함께 비즈니스 경쟁력을 강화하세요.`,
         },
         {
             id: "security",
@@ -142,7 +142,7 @@
             src: bareaItemIconSecurity,
             srcActive: bareaItemIconSecurityActive,
             heading: `<span class="point-word">비즈니스 안전</span>을 책임지는 <br/>유포트의 보안 관제`,
-            description: `유포트는 <span class="point-word">보안 운영 센터, 클라우드 보안 관제, 네트워크 보안 장비, 보안 컨설팅 등</span> 전반적인<br/><span class="point-word">보안 관제 서비스</span>를 제공합니다. 최첨단 기술과 전문 인력을 통해 사이버 위협으로부터<br/>비즈니스를 보호하고, 안전한 운영 환경을 구축합니다.<br/>유포트와 함께 믿을 수 있는 보안 솔루션으로 비즈니스의 신뢰성을 높이세요.`,
+            description: `유포트는 <span class="point-word">보안 운영 센터, 클라우드 보안 관제, 네트워크 보안 장비, 보안 컨설팅 등</span> 전반적인 <span class="point-word">보안 관제 서비스</span>를 제공합니다. 최첨단 기술과 전문 인력을 통해 사이버 위협으로부터 비즈니스를 보호하고, 안전한 운영 환경을 구축합니다. 유포트와 함께 믿을 수 있는 보안 솔루션으로 비즈니스의 신뢰성을 높이세요.`,
         },
         {
             id: "si",
@@ -151,7 +151,7 @@
             src: bareaItemIconSi,
             srcActive: bareaItemIconSiActive,
             heading: `시스템 통합으로 <br><span class="point-word">비즈니스 효율</span>을 극대화`,
-            description: `유포트는 다양한 시스템과 기술을 하나로 연결하는 시스템 통합(SI) 분야에서 전문적인 솔루션을<br/>제공합니다. <span class="point-word">시스템 통합 컨설팅, 시스템 설치 및 통합, 시스템 공급, 위탁 운영 관리, 기술 지원 등</span><br/>전반적인 서비스를 통해 비즈니스 프로세스를 최적화합니다.<br/>복잡한 시스템 환경을 효율적으로 관리하고 생산성을 향상시키고자 한다면, 유포트와 함께하세요.`,
+            description: `유포트는 다양한 시스템과 기술을 하나로 연결하는 시스템 통합(SI) 분야에서 전문적인 솔루션을 제공합니다. <span class="point-word">시스템 통합 컨설팅, 시스템 설치 및 통합, 시스템 공급, 위탁 운영 관리, 기술 지원 등</span> 전반적인 서비스를 통해 비즈니스 프로세스를 최적화합니다. 복잡한 시스템 환경을 효율적으로 관리하고 생산성을 향상시키고자 한다면, 유포트와 함께하세요.`,
         },
     ];
 
@@ -369,108 +369,40 @@
         <section
             class="page-section"
             id="barea"
-            style=""
             bind:this={elementList[BAREA]}
         >
-            <div class="background-image-container" />
+            <div class="background-image-container"></div>
             <div class="container">
-                <!--if width is 1180px or large than 1180px-->
-
-                <div class="content-container">
-                    {#if isAllBareasDeactivated()}
-                        <h2 class="section-heading">
-                            단계별 비즈니스 성장을<br />함께하는
-                            <span class="point-word">기술 파트너</span>
-                        </h2>
-                        <p class="section-description">
-                            유포트는 스토리지와 데이터 비즈니스를 중심으로 <span
-                                class="point-word"
-                                >클라우드, AI, 소프트웨어 개발,
-                                <br />
-                                보안 관제, 시스템 통합까지 아우르는 풀스택 기술 지원</span
-                            >을 제공합니다.
-                            <br />
-                            각 영역의 전문가들은 귀사의 비즈니스 성장을 가속화하고,
-                            경쟁력을
-                            <br />
-                            강화하는 데에 아낌없는 지원을 해드리기 위해 존재합니다.
-                            <br />
-                            유포트의 통합된 기술 지원으로 비즈니스의 새로운 가능성을
-                            발견하세요
-                        </p>
-                    {/if}
-                    {#each bareaInfos as bareaInfo, index}
-                        {#if bareaInfo.isActive}
-                            <h2 class="section-heading">
-                                {@html bareaInfo.heading}
-                            </h2>
-                            <p class="section-description">
-                                {@html bareaInfo.description}
-                            </p>
-                        {/if}
-                    {/each}
+                <div class="content-container text-center mb-16 w-full px-4">
+                    <h2 class="section-heading mb-8">
+                        단계별 비즈니스 성장을 함께하는<br class="md:hidden" /> <span class="point-word">기술 파트너</span>
+                    </h2>
+                    <p class="section-description max-w-3xl mx-auto">
+                        유포트는 스토리지와 데이터 비즈니스를 중심으로 
+                        <span class="font-bold text-[#111827]">클라우드, AI, 소프트웨어 개발, 보안 관제, 시스템 통합까지 
+                        아우르는 풀스택 기술 지원 </span>을 제공합니다.<br class="hidden md:block my-2"/> 각 영역의 전문가들은 귀사의 비즈니스 성장을 가속화하고, 
+                        경쟁력을 강화하는 데에 아낌없는 지원을 해드리기 위해 존재합니다.<br class="hidden md:block my-2"/>
+        
+                         유포트의 통합된 기술 지원으로 비즈니스의 새로운 가능성을 발견하세요.
+                    </p>
                 </div>
-                <div class="barea-items-container">
-                    {#each bareaInfos as bareaInfo, index}
-                        <div
-                            class="barea-item-container {bareaInfo.isActive
-                                ? 'active'
-                                : ''}"
-                            on:mouseenter={() => {
-                                activateBarea(index);
-                            }}
-                            on:mouseleave={() => {
-                                deativateAllBareas();
-                            }}
-                            role="button"
-                            tabindex="0"
-                        >
-                            <h3
-                                class="barea-item-title {bareaInfo.isActive
-                                    ? 'active'
-                                    : ''}"
-                            >
-                                {bareaInfo.name}
-                            </h3>
-                            <div class="barea-icon-container">
-                                <img
-                                    class="barea-icon-img"
-                                    src={bareaInfo.isActive
-                                        ? bareaInfo.srcActive
-                                        : bareaInfo.src}
-                                    alt="스토리지"
+                <div class="barea-grid-container">
+                    {#each bareaInfos as barea}
+                        <div class="barea-card">
+                            <div class="icon-wrapper mb-6">
+                                <img 
+                                    src={barea.src} 
+                                    alt={barea.name} 
+                                    class="w-16 h-16 object-contain"
                                 />
                             </div>
-                        </div>
-                    {/each}
-                </div>
-                <div class="description-container">
-                    {#if isAllBareasDeactivated()}
-                        <p class="section-description">
-                            유포트는 스토리지와 데이터 비즈니스를 중심으로
-                            <br />
-                            <span class="point-word"
-                                >클라우드, AI, 소프트웨어 개발, 보안 관제,
-                                시스템 통합까지
-                                <br />
-                                아우르는 풀스택 기술 지원</span
-                            >을 제공합니다.
-                            <br />
-                            각 영역의 전문가들은 귀사의 비즈니스 성장을 가속화하고,
-                            <br />
-                            경쟁력을 강화하는 데에 아낌없는 지원을 해드리기 위해
-                            존재합니다.
-                            <br />
-                            유포트의 통합된 기술 지원으로 비즈니스의 새로운 가능성을
-                            발견하세요
-                        </p>
-                    {/if}
-                    {#each bareaInfos as bareaInfo, index}
-                        {#if bareaInfo.isActive}
-                            <p class="section-description">
-                                {@html bareaInfo.description}
+                            <h3 class="card-title">
+                                {barea.name}
+                            </h3>
+                            <p class="card-desc">
+                                {@html barea.description}
                             </p>
-                        {/if}
+                        </div>
                     {/each}
                 </div>
             </div>
