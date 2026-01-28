@@ -212,7 +212,7 @@ p {
     }
 
     .masthead .video-container video {
-        filter: brightness(50%);
+        filter: brightness(25%);
         object-fit: cover;
         height: 100vh;
         width: 100%;
@@ -458,7 +458,7 @@ p {
     .page-section h2.section-heading,
     .page-section .section-heading.h2 {
         @apply mt-0 mb-4;
-        font-size: 2.5rem;
+        /* font-size: 2.5rem; */
     }
 
     .point-word {
@@ -747,6 +747,10 @@ p {
         text-align: center;
     }
 
+    .root_daum_roughmap {
+        font-size: 50px;
+    }
+
     .barea-items-container {
         @apply grid grid-cols-3;
         width: fit-content;
@@ -1026,7 +1030,7 @@ p {
 
     #clients .section-heading, #partners .section-heading {
         @apply text-center w-fit font-bold;
-        font-family: 'Oxanium', sans-serif;
+        font-family: 'Montserrat', sans-serif;
         font-size: 26px;
         color: #ffffff;
         line-height: 32.5px;
@@ -1082,7 +1086,7 @@ p {
 
         #clients .section-heading, #partners .section-heading {
             @apply text-left w-full font-bold;
-            font-family: 'Oxanium', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             font-size: 48px;
             color: #ffffff;
             line-height: 60px;
@@ -1138,13 +1142,13 @@ p {
 
     #location .section-heading {
         @apply text-black text-center;
-        font-family: "Oxanium", sans-serif;
+        font-family: "Montserrat", sans-serif;
         font-weight: 800;
         font-size: 26px;
         line-height: 32.5px;
     }
 
-    #location .section-description {
+    /* #location .section-description {
         @apply text-black text-center;
         font-family: 'NanumSquare', sans-serif;
         font-weight: 300;
@@ -1153,7 +1157,7 @@ p {
         letter-spacing: -2%;
         text-align: center;
         height: fit-content;
-    }
+    } */
 
     #contact {
         @apply flex flex-col items-center;
@@ -1170,13 +1174,13 @@ p {
     }
     #contact .section-heading {
         @apply text-black text-center;
-        font-family: "Oxanium", sans-serif;
+        font-family: "Montserrat", sans-serif;
         font-weight: 800;
         font-size: 26px;
         line-height: 32.5px;
     }
 
-    #contact .section-description {
+    /* #contact .section-description {
         @apply text-black text-center;
         font-family: 'NanumSquare', sans-serif;
         font-weight: 300;
@@ -1185,7 +1189,7 @@ p {
         letter-spacing: -2%;
         text-align: center;
         height: fit-content;
-    }
+    } */
 
 
     #contact .form-container {
@@ -1272,11 +1276,11 @@ p {
             line-height: 60px;
         }
 
-        #location .section-description, #contact .section-description {
+        /* #location .section-description, #contact .section-description {
             font-weight: 300;
             font-size: 20px;
             line-height: 22.7px;
-        }
+        } */
 
         #contact .form-container form .form-group-container {
             padding: 33px 71px;
@@ -1516,7 +1520,7 @@ p {
 
         header.masthead .masthead-copy {
             @apply mx-auto mt-10;
-            width: 1155px;
+            width: 1200px;
         }
     
         header.masthead .masthead-copy .main-copy {
@@ -1542,7 +1546,7 @@ p {
 /* Business Area Grid Design */
 
 #barea {
-    height: auto !important; /* 고정 높이 해제 */
+    height: auto !important;
     padding-bottom: 100px;
 }
 
@@ -1554,130 +1558,274 @@ p {
     text-align: center;
 }
 
-/* 그리드 레이아웃 설정 */
 .barea-grid-container {
     display: grid;
-    grid-template-columns: 1fr; /* 모바일: 1열 */
-    gap: 30px; /* 카드 사이 간격 */
+    grid-template-columns: 1fr;
+    gap: 30px;
     width: 100%;
 }
 
 @media (min-width: 768px) {
     .barea-grid-container {
-        grid-template-columns: repeat(2, 1fr); /* 태블릿: 2열 */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (min-width: 1200px) {
     .barea-grid-container {
-        grid-template-columns: repeat(3, 1fr); /* PC: 3열 */
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
-/* 개별 카드 디자인 */
-.barea-card {
-    position: relative; /* 가상 요소 배치를 위해 필수 */
-    background: transparent; /* 배경색은 가상 요소가 담당함 */
-    padding: 40px 32px;
+#barea {
+    height: auto !important;
+    background-color: #ffffff;
+    padding-bottom: 150px;
+    overflow-x: hidden;
+}
+
+.header-wrap {
+    margin-bottom: 80px;
+}
+
+.location-header-wrap {
+    margin-bottom: 50px;
+}
+
+.contact-header-wrap {
+    margin-bottom: 50px;
+}
+
+.section-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+    color: #111827;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+}
+
+.section-description {
+    font-family: 'NanumSquare', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #6B7280;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.section-description-border {
+    padding-left: 20px;
+    border-left: 4px solid #0067C5;
+}
+
+@media (min-width: 1024px) {
+    .section-description-border { padding-left: 20px; border-left: 4px solid #0067C5; }
+    .section-heading { font-size: 60px; margin-bottom: 20px; }
+    .section-description { font-size: 22px;}
+
+    #location .section-heading, #contact .section-heading {
+        font-size: 60px;
+    }
+}
+
+.barea-feature-list {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    
-    /* 카드 전체의 입체감 그림자 (테두리와는 별개) */
-    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.03));
-}
-
-/* 1. [테두리 역할] 회색 배경층 (제일 뒤) */
-.barea-card::before {
-    content: "";
-    position: absolute;
-    inset: 0; /* 꽉 채우기 */
-    background: #E5E7EB;
-    z-index: -2; /* 맨 뒤로 */
-    
-    /* 모양 자르기 */
-    clip-path: polygon(
-        0 0, 
-        100% 0, 
-        100% calc(100% - 40px), 
-        calc(100% - 40px) 100%, 
-        0 100%
-    );
-    
-    transition: background-color 0.3s ease; /* 호버 시 색상 변경 애니메이션 */
-}
-
-/* 2. [카드 본체] 흰색 배경층 (테두리 바로 앞) */
-.barea-card::after {
-    content: "";
-    position: absolute;
-    inset: 1px; /* 1px만큼 안으로 들어감 -> 이 틈으로 회색이 보여서 테두리가 됨 */
-    background-color: #fff; /* 카드 내부 색상 */
-    z-index: -1; /* 글자보다 뒤, 테두리보다 앞 */
-    
-    /* 똑같이 잘라주기 */
-    clip-path: polygon(
-        0 0, 
-        100% 0, 
-        100% calc(100% - 40px), 
-        calc(100% - 40px) 100%, 
-        0 100%
-    );
-
-    transition: inset 0.3s ease;
-}
-
-/* === 호버 효과 === */
-.barea-card:hover {
-    transform: translateY(-7px);
-    /* 호버 시 그림자 진하게 */
-    filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.1));
-}
-
-/* 호버 시 테두리 색상(::before의 배경색) 변경 */
-.barea-card:hover::before {
-    background: linear-gradient(to bottom, #0067C5 6px, #E5E7EB 6px);
-}
-
-/* 호버 시 ::after (흰색 카드) 변경 */
-.barea-card:hover::after {
-    inset: 6px 1px 1px 1px; 
-}
-
-.barea-card .icon-wrapper {
-    display: flex;
-    justify-content: flex-start;
     width: 100%;
 }
 
-.barea-card .card-title {
+.feature-row {
+    display: flex;
+    flex-direction: column;
+    padding: 60px 0;
+    gap: 40px;
+    border-top: 1px solid #E5E7EB;
+}
+
+@media (min-width: 1024px) {
+    .feature-row {
+        flex-direction: row;
+        justify-content: space-between;
+        min-height: 70vh; 
+        padding: 80px 0;
+        gap: 100px;
+    }
+    .feature-row.reverse {
+        flex-direction: row-reverse;
+    }
+}
+
+
+/* 3. 텍스트 영역 (외부 설명글) */
+.feature-text {
+    flex: 1;
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tech-label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: #0067C5;
+    margin-bottom: 20px;
+    letter-spacing: 0.1em;
+    display: flex; align-items: center; gap: 8px;
+}
+.tech-num { opacity: 0.6; } .tech-line { color: #E5E7EB; }
+
+.feature-main-title {
     font-family: 'NanumSquare', sans-serif;
-    font-weight: 800;
-    font-size: 24px;
+    font-weight: 900;
+    font-size: 32px;
     color: #111827;
     margin-bottom: 16px;
-
-    transition: color 0.3s ease;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
 }
 
-/* 마우스 올리면 제목 색상 변경 */
-.barea-card:hover .card-title {
-    color: #000;
-}
-
-.barea-card .card-desc {
+.feature-sub-title {
     font-family: 'NanumSquare', sans-serif;
-    font-size: 15px;
+    font-weight: 700;
+    font-size: 18px;
     color: #4B5563;
-    line-height: 1.65;
-    word-break: keep-all; /* 단어 단위 줄바꿈 */
-    margin: 0;
+    margin-bottom: 24px;
 }
 
-/* 카드 내부 강조 단어 스타일 */
-.barea-card .card-desc .point-word {
-    color: #0067C5;
+.feature-desc {
+    font-family: 'NanumSquare', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #6B7280;
+    margin-bottom: 32px;
+    max-width: 520px;
+    word-break: keep-all;
+}
+
+.tech-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tech-tag {
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 12px; 
+    font-weight: 600;
+    color: #111827; 
+    background-color: #F3F4F6;
+    padding: 8px 16px; 
+    border-radius: 100px;
+    transition: all 0.3s ease; 
+    border: 1px solid transparent;
+    cursor: default;
+}
+.tech-tag:hover {
+    background-color: #ffffff; 
+    border-color: #0067C5;
+    color: #0067C5; 
+    transform: translateY(-2px);
+}
+
+@media (min-width: 1024px) {
+    .feature-main-title { font-size: 56px; }
+    .feature-sub-title { font-size: 24px; }
+    .feature-desc { font-size: 18px; }
+}
+
+.feature-image-area {
+    flex: 1.2; width: 100%;
+    display: flex; justify-content: center; align-items: center;
+}
+
+.image-frame {
+    width: 100%; max-width: 800px; aspect-ratio: 16 / 10;
+    border-radius: 16px; overflow: hidden; position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.real-image {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.7s ease;
+    filter: brightness(0.8);
+}
+
+.img-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to bottom, transparent 60%, rgba(0, 0, 0, 0.7) 100%);
+    pointer-events: none; z-index: 1;
+}
+
+.brand-overlay {
+    position: absolute;
+    bottom: 35px; left: 35px; right: 35px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 10;
+}
+
+.brand-overlay::before {
+    content: '1';
+    width: 1.5px;
+    height: 24px;
+    background-color: #0067C5;
+    display: block;
+    color: transparent;
+}
+
+.brand-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand-badge:not(:last-child)::after {
+    content: '/';
+    color: rgba(255, 255, 255, 0.4);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.brand-name {
+    font-family: 'Montserrat', sans-serif;
     font-weight: 800;
+    font-size: 15px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.brand-desc {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+}
+
+.feature-row:hover .image-frame { box-shadow: 0 30px 60px rgba(0, 103, 197, 0.2); }
+.feature-row:hover .real-image { transform: scale(1.04); filter: brightness(0.95); }
+.brand-badge:hover::before { background-color: #0067C5; }
+
+@media (max-width: 768px) {
+    .image-frame { aspect-ratio: 4/3; }
+    .brand-overlay { bottom: 20px; left: 20px; }
+    .brand-name { font-size: 15px; }
+    .brand-badge::before { height: 24px; }
+}
+
+@media (max-width: 768px) {
+    .header-wrap {
+        margin-bottom: 60px;
+    }
+
+    .location-header-wrap {
+        margin-bottom: 30px;
+    }
+
+    .contact-header-wrap { 
+        margin-bottom: 30px;
+    }
 }

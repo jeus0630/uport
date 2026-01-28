@@ -35,6 +35,10 @@
     import bareaItemIconSecurityActive from "$lib/assets/images/barea/item-icon-security-active.svg";
     import bareaItemIconSi from "$lib/assets/images/barea/item-icon-si.svg";
     import bareaItemIconSiActive from "$lib/assets/images/barea/item-icon-si-active.svg";
+    import bareaGPU from "$lib/assets/images/barea/gpu.png";
+    import bareaStorage from "$lib/assets/images/barea/storage.png";
+    import bareaCloud from "$lib/assets/images/barea/cloud.png";
+    import bareaMonitoring from "$lib/assets/images/barea/monitoring.png";
 
     // clients section
     import clientLogo1 from "$lib/assets/images/clients/건국대학교병원logo.png";
@@ -58,17 +62,18 @@
     import partnerLogo1 from "$lib/assets/images/partners/netapp_logo.svg";
     import partnerLogo2 from "$lib/assets/images/partners/에티버스이비티logo.png";
     import partnerLogo3 from "$lib/assets/images/partners/lenovo_logo.png";
-    import partnerLogo4 from "$lib/assets/images/partners/Dell_EMC_logo.svg";
-    import partnerLogo5 from "$lib/assets/images/partners/zungwon_logo.png";
+    import partnerLogo4 from "$lib/assets/images/partners/zungwon_logo.png";
+    import partnerLogo5 from "$lib/assets/images/partners/Dell_EMC_logo.png";
     import partnerLogo6 from "$lib/assets/images/partners/softitech_logo.png";
     import partnerLogo7 from "$lib/assets/images/partners/epsilondelta_logo.svg";
     import partnerLogo8 from "$lib/assets/images/partners/HLsystem_logo.png";
     import partnerLogo9 from "$lib/assets/images/partners/synology.svg";
-    import partnerLogo10 from "$lib/assets/images/partners/cisco_logo.svg";
-    import partnerLogo11 from "$lib/assets/images/partners/brocade_logo.png";
-    import partnerLogo12 from "$lib/assets/images/partners/juniper_logo.webp";
-    import partnerLogo13 from "$lib/assets/images/partners/HPE_logo.svg";
-    import partnerLogo14 from "$lib/assets/images/partners/HUAWEI_logo.svg";
+    import partnerLogo10 from "$lib/assets/images/partners/HUAWEI_logo.svg";
+    import partnerLogo11 from "$lib/assets/images/partners/cisco_logo.svg";
+    import partnerLogo12 from "$lib/assets/images/partners/brocade_logo.png";
+    import partnerLogo13 from "$lib/assets/images/partners/juniper_logo.webp";
+    import partnerLogo14 from "$lib/assets/images/partners/HPE_logo.svg";
+    
     
 
 
@@ -102,56 +107,89 @@
         {
             id: "storage",
             name: "스토리지",
+            imgUrl: bareaStorage,
+            partners: [
+                { name: "NetApp", desc: "Enterprise Storage" },
+                { name: "HUAWEI", desc: "All-Flash Solution" },
+                { name: "Synology", desc: "Smart NAS" }
+            ],
+            tags: ["NetApp", "HUAWEI", "Synology", "All-Flash NVMe"],
             isActive: false,
             src: bareaItemIconStorage,
             srcActive: bareaItemIconStorageActive,
-            heading: `데이터의 가치를 높이는<br/><span class="point-word">스토리지 전문가</span>`,
-            description: `유포트는 기업의 핵심 자산인 데이터를 안전하고 효율적으로 관리하기 위한 스토리지 솔루션을 제공합니다. 풍부한 경험과 전문성을 바탕으로 고객 맞춤형 <span class="point-word">스토리지 구축, 운영, 유지보수 서비스</span>를 제공하여 비즈니스 연속성을 보장합니다. <span class="point-word">데이터의 저장부터 운영, 보호까지</span>, 유포트가 신뢰할 수 있는 파트너가 되어드립니다.`,
+            heading: `데이터의 가치를 높이는<br>엔터프라이즈 스토리지 전문가`, 
+            description: `기업의 핵심 자산인 데이터를 안전하게 보호하고 관리합니다. 글로벌 선도 기술인 NetApp과 HUAWEI의 고성능 올플래시 스토리지부터 Synology의 스마트 NAS 솔루션까지, 고객의 비즈니스 규모에 최적화된 데이터 인프라를 구축합니다.`,
         },
         {
             id: "cloud",
             name: "클라우드",
+            imgUrl: bareaCloud,
+            partners: [
+                { name: "Nutanix", desc: "HCI Cloud Platform" },
+                { name: "Lenovo", desc: "ThinkAgile Server" }
+            ],
+            tags: ["Hybrid Cloud", "Infra Architecture", "HCI"],
             isActive: false,
             src: bareaItemIconCloud,
             srcActive: bareaItemIconCloudActive,
-            heading: `클라우드로 비즈니스의 <br/><span class="point-word">한계를 넘어서</span>십시오`,
-            description: `유포트는 NetApp Cloud SaaS를 중심으로 <span class="point-word">AWS, Azure, Google Cloud, NCP 등</span> 다양한 클라우드 플랫폼에서의 맞춤형 클라우드 서비스를 제공합니다. NetApp의 선도적인 기술과 유포트의 전문성이 결합하여 <span class="point-word">멀티 클라우드 환경 구축, 데이터 관리 및 최적화</span>를 지원합니다.`,
+            heading: `퍼블릭부터 프라이빗까지,<br>완벽한 하이브리드 클라우드`,
+            description: `AWS, Azure 등 퍼블릭 클라우드뿐만 아니라, Lenovo ThinkAgile 서버와 Nutanix HCI 기반의 강력한 프라이빗 클라우드 구축을 지원합니다.`,
         },
         {
             id: "ai",
             name: "AI/데이터",
+            imgUrl: bareaGPU,
+            partners: [
+                { name: "NVIDIA", desc: "AI Infrastructure" },
+            ],
+            tags: ["GPU Server", "NVIDIA H100/L40S", "Generative AI", "MLOps"],
             isActive: false,
             src: bareaItemIconAi,
             srcActive: bareaItemIconAiActive,
-            heading: `AI와 데이터로 <span class="point-word">비즈니스<br/>혁신을</span> 함께하는 유포트`,
-            description: `유포트는 인공지능 전문 기업 엡실론델타와의 파트너십을 통해 AI와 데이터 분야에서 최상의 솔루션을 제공합니다. <span class="point-word">AI 서비스 개발, 챗봇(생성형 AI) 개발, AI 플랫폼 구축, MLOps 구축/운영 등</span> 전방위적인 서비스를 통해 비즈니스의 새로운 가능성을 열어드립니다. 데이터 인사이트 도출부터 AI 기술 도입까지, 유포트가 엡실론델타와 함께 귀사의 비즈니스 혁신을 도와드리겠습니다.`,
+            heading: `AI 인프라부터 솔루션까지,<br>맞춤형 AI 비즈니스`,
+            description: `주요 AI 기업에 NVIDIA GPU 서버 인프라를 성공적으로 납품하고 있습니다. 생성형 AI(LLM) 도입, MLOps 플랫폼 구축 등 인프라와 소프트웨어를 아우르는 최적의 AI 환경을 제공합니다.`,
         },
         {
             id: "software",
             name: "소프트웨어",
+            imgUrl: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80",
+            partners: [
+                { name: "FullStack", desc: "Web App" },
+            ],
+            tags: ["Custom Dev", "SaaS", "Mobile App"],
             isActive: false,
             src: bareaItemIconSoftware,
             srcActive: bareaItemIconSoftwareActive,
-            heading: `맞춤형 소프트웨어로 <span class="point-word">비즈니스 <br/>가치를 높이는</span> 유포트`,
-            description: `유포트는 <span class="point-word">웹, 모바일 앱, 플랫폼, SaaS 등</span> 다양한 분야에서 <span class="point-word">맞춤형 소프트웨어 개발</span> 서비스를 제공합니다. 고객의 비즈니스 요구 사항에 최적화된 솔루션을 제공하여 효율성과 생산성을 향상시킵니다. 혁신적인 기술과 풍부한 경험을 바탕으로 디지털 전환을 선도하는 유포트와 함께 비즈니스 경쟁력을 강화하세요.`,
+            heading: `비즈니스 가치를 극대화하는<br>맞춤형 소프트웨어`,
+            description: `고객의 비즈니스 프로세스에 최적화된 웹/앱 플랫폼을 개발합니다. 기획부터 디자인, 개발, 유지보수까지 전 과정을 아우르는 엔터프라이즈급 소프트웨어 개발 서비스를 경험하세요.`,
         },
         {
             id: "security",
             name: "보안/관제",
+            imgUrl: bareaMonitoring,
+            partners: [
+                { name: "DataCenter", desc: "IDC Technician" },
+            ],
+            tags: ["Data Center", "Network Protection"],
             isActive: false,
             src: bareaItemIconSecurity,
             srcActive: bareaItemIconSecurityActive,
-            heading: `<span class="point-word">비즈니스 안전</span>을 책임지는 <br/>유포트의 보안 관제`,
-            description: `유포트는 <span class="point-word">보안 운영 센터, 클라우드 보안 관제, 네트워크 보안 장비, 보안 컨설팅 등</span> 전반적인 <span class="point-word">보안 관제 서비스</span>를 제공합니다. 최첨단 기술과 전문 인력을 통해 사이버 위협으로부터 비즈니스를 보호하고, 안전한 운영 환경을 구축합니다. 유포트와 함께 믿을 수 있는 보안 솔루션으로 비즈니스의 신뢰성을 높이세요.`,
+            heading: `비즈니스 안전을 책임지는<br>빈틈없는 보안 관제`,
+            description: `24시간 365일 중단 없는 보안 관제 서비스를 제공합니다. 사이버 위협 및 장애를 실시간으로 탐지하고 대응하여 귀사의 소중한 정보 자산을 완벽하게 보호합니다.`,
         },
         {
             id: "si",
             name: "시스템통합",
+            imgUrl: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80",
+            partners: [
+                { name: "System", desc: "Next Generation" },
+            ],
+            tags: ["System Integration", "Consulting", "Tech Support"],
             isActive: false,
             src: bareaItemIconSi,
             srcActive: bareaItemIconSiActive,
-            heading: `시스템 통합으로 <br><span class="point-word">비즈니스 효율</span>을 극대화`,
-            description: `유포트는 다양한 시스템과 기술을 하나로 연결하는 시스템 통합(SI) 분야에서 전문적인 솔루션을 제공합니다. <span class="point-word">시스템 통합 컨설팅, 시스템 설치 및 통합, 시스템 공급, 위탁 운영 관리, 기술 지원 등</span> 전반적인 서비스를 통해 비즈니스 프로세스를 최적화합니다. 복잡한 시스템 환경을 효율적으로 관리하고 생산성을 향상시키고자 한다면, 유포트와 함께하세요.`,
+            heading: `비즈니스 효율을 극대화하는<br>시스템 통합`,
+            description: `복잡한 IT 인프라와 시스템을 하나의 유기적인 환경으로 통합합니다. 컨설팅부터 시스템 설계, 구축, 운영 지원까지 토털 SI 서비스를 통해 업무 효율성을 혁신적으로 높여드립니다.`,
         },
     ];
 
@@ -177,17 +215,17 @@
         { name: "NetApp", logo: partnerLogo1 },
         { name: "에티버스<br>이비티", logo: partnerLogo2 },
         { name: "레노버", logo: partnerLogo3 },
-        { name: "DELL<br>EMC", logo: partnerLogo4 },
-        { name: "정원엔시스", logo: partnerLogo5 },
+        { name: "정원엔시스", logo: partnerLogo4 },
+        { name: "DELL<br>EMC", logo: partnerLogo5 },
         { name: "소프트아이텍", logo: partnerLogo6 },
         { name: "엡실론델타", logo: partnerLogo7 },
         { name: "에이치엘<br>시스템", logo: partnerLogo8 },
         { name: "시놀로지", logo: partnerLogo9 },
-        { name: "시스코", logo: partnerLogo10 },
-        { name: "브로케이드", logo: partnerLogo11 },
-        { name: "주니퍼", logo: partnerLogo12 },
-        { name: "HPE", logo: partnerLogo13 },
-        { name: "HUAWEI", logo: partnerLogo14 },
+        { name: "HUAWEI", logo: partnerLogo10 },
+        { name: "시스코", logo: partnerLogo11 },
+        { name: "브로케이드", logo: partnerLogo12 },
+        { name: "주니퍼", logo: partnerLogo13 },
+        { name: "HPE", logo: partnerLogo14 },
     ];
 
     const contactInquiryOptions = [
@@ -366,42 +404,62 @@
         element={elementList[BAREA]}
         bind:intersecting={intersectingList[BAREA]}
     >
-        <section
-            class="page-section"
-            id="barea"
-            bind:this={elementList[BAREA]}
-        >
-            <div class="background-image-container"></div>
+        <section class="page-section" id="barea" bind:this={elementList[BAREA]}>
             <div class="container">
-                <div class="content-container text-center mb-16 w-full px-4">
-                    <h2 class="section-heading mb-8">
-                        단계별 비즈니스 성장을 함께하는<br class="md:hidden" /> <span class="point-word">기술 파트너</span>
-                    </h2>
-                    <p class="section-description max-w-3xl mx-auto">
-                        유포트는 스토리지와 데이터 비즈니스를 중심으로 
-                        <span class="font-bold text-[#111827]">클라우드, AI, 소프트웨어 개발, 보안 관제, 시스템 통합까지 
-                        아우르는 풀스택 기술 지원 </span>을 제공합니다.<br class="hidden md:block my-2"/> 각 영역의 전문가들은 귀사의 비즈니스 성장을 가속화하고, 
-                        경쟁력을 강화하는 데에 아낌없는 지원을 해드리기 위해 존재합니다.<br class="hidden md:block my-2"/>
-        
-                         유포트의 통합된 기술 지원으로 비즈니스의 새로운 가능성을 발견하세요.
+                
+                <div class="header-wrap">
+                    <h2 class="section-heading">Business Areas</h2>
+                    <p class="section-description section-description-border">
+                        유포트는 스토리지, 클라우드, AI를 아우르는<br class="hidden md:block"/>
+                        <span class="text-black font-bold">End-to-End 기술 파트너</span>입니다.
                     </p>
                 </div>
-                <div class="barea-grid-container">
-                    {#each bareaInfos as barea}
-                        <div class="barea-card">
-                            <div class="icon-wrapper mb-6">
-                                <img 
-                                    src={barea.src} 
-                                    alt={barea.name} 
-                                    class="w-16 h-16 object-contain"
-                                />
+
+                <div class="barea-feature-list">
+                    {#each bareaInfos as barea, index}
+                        <div class="feature-row {index % 2 !== 0 ? 'row-reverse' : ''}">
+                            
+                            <div class="feature-text">
+                                <div class="tech-label">
+                                    <span class="tech-num">0{index + 1}</span>
+                                    <span class="tech-line">/</span>
+                                    <span class="tech-name">{barea.id.toUpperCase()}</span>
+                                </div>
+
+                                <h3 class="feature-main-title">{barea.name}</h3>
+                                <h4 class="feature-sub-title">{@html barea.heading}</h4>
+                                <p class="feature-desc">{@html barea.description}</p>
+
+                                <div class="tech-tags">
+                                    {#each barea.tags as tag}
+                                        <span class="tech-tag">#{tag}</span>
+                                    {/each}
+                                </div>
                             </div>
-                            <h3 class="card-title">
-                                {barea.name}
-                            </h3>
-                            <p class="card-desc">
-                                {@html barea.description}
-                            </p>
+
+                            <div class="feature-image-area">
+                                <div class="image-frame">
+                                    <img 
+                                        src={barea.imgUrl} 
+                                        alt="{barea.name} Reference" 
+                                        class="real-image" 
+                                    />
+                                    
+                                    {#if barea.partners}
+                                        <div class="brand-overlay">
+                                            {#each barea.partners as partner}
+                                                <div class="brand-badge">
+                                                    <span class="brand-name">{partner.name}</span>
+                                                    <span class="brand-desc">{partner.desc}</span>
+                                                </div>
+                                            {/each}
+                                        </div>
+                                    {/if}
+
+                                    <div class="img-overlay"></div>
+                                </div>
+                            </div>
+                            
                         </div>
                     {/each}
                 </div>
@@ -620,14 +678,17 @@
             <!-- map kakao-->
             <div class="container">
                 <h2 class="section-heading">Location</h2>
-                <p class="section-description">
-                    유포트로 오시는 길을 안내해드립니다.
-                </p>
+                <div class="header-wrap location-header-wrap">
+                    <p class="section-description section-description-border">
+                        유포트로 <span class="text-black font-bold">오시는 길</span>을 <br class="hidden md:block"/>
+                        안내해드립니다.
+                    </p>
+                </div>
                 <!-- * 카카오맵 - 지도퍼가기 -->
                 <!-- 1. 지도 노드 -->
                 <div 
                     id="daumRoughmapContainer1753794344506" 
-                    class="root_daum_roughmap root_daum_roughmap_landing"
+                    class="root_daum_roughmap root_daum_roughmap_landing test"
                     style="width:100%">
                 </div>
                 
@@ -645,10 +706,12 @@
             bind:this={elementList[CONTACT]}
         >
             <div class="container">
-                <h2 class="section-heading">Contact</h2>
-                <p class="section-description">
-                    유포트의 기술지원이 필요하시다면 문의 메일을 주세요
-                </p>
+                <div class="header-wrap contact-header-wrap">
+                    <h2 class="section-heading">Contact</h2>
+                    <p class="section-description section-description-border">
+                        유포트의 기술지원이 필요하시다면 <br class="hidden md:block"/> <span class="text-black font-bold">문의 메일</span>을 주세요    
+                    </p>
+                </div>
                 <div class="form-container">
                     <form on:submit|preventDefault={handleSubmit}>
                         <div class="form-group-container">
